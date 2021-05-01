@@ -4,6 +4,8 @@ from stay_awake import stay_awake
 
 stay_awake()
 
+# Example Discord Bot in Python
+
 bot = discord.Client()
 
 @bot.event
@@ -31,7 +33,5 @@ async def on_message(message):
   if message.content.startswith('$channel'):
     channel_name = message.content[8:].strip()
     await message.channel.category.create_text_channel(channel_name)
-
-  
 
 bot.run(os.environ['TOKEN'])
